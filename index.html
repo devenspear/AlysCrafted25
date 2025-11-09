@@ -1041,34 +1041,49 @@ function showEventModal(e){
 }
 
 // View switching
-$("#listViewBtn").addEventListener("click",()=>{
-  console.log("List view button clicked");
-  $(".list-view").classList.add("active");
-  $(".calendar-view").classList.remove("active");
-  $("#listViewBtn").classList.add("active");
-  $("#calViewBtn").classList.remove("active");
-});
+const listViewBtn = $("#listViewBtn");
+const calViewBtn = $("#calViewBtn");
+const listView = $(".list-view");
+const calendarView = $(".calendar-view");
 
-$("#calViewBtn").addEventListener("click",()=>{
-  console.log("Calendar view button clicked");
-  $(".calendar-view").classList.add("active");
-  $(".list-view").classList.remove("active");
-  $("#calViewBtn").classList.add("active");
-  $("#listViewBtn").classList.remove("active");
-  console.log("Rendering calendar...");
-  renderCalendar();
-  console.log("Calendar rendered");
-});
+if(!listViewBtn) console.error("List view button (#listViewBtn) not found!");
+if(!calViewBtn) console.error("Calendar view button (#calViewBtn) not found!");
+if(!listView) console.error("List view element (.list-view) not found!");
+if(!calendarView) console.error("Calendar view element (.calendar-view) not found!");
+
+if(listViewBtn && calViewBtn && listView && calendarView){
+  listViewBtn.addEventListener("click",()=>{
+    console.log("List view button clicked");
+    listView.classList.add("active");
+    calendarView.classList.remove("active");
+    listViewBtn.classList.add("active");
+    calViewBtn.classList.remove("active");
+  });
+
+  calViewBtn.addEventListener("click",()=>{
+    console.log("Calendar view button clicked");
+    calendarView.classList.add("active");
+    listView.classList.remove("active");
+    calViewBtn.classList.add("active");
+    listViewBtn.classList.remove("active");
+    console.log("Rendering calendar...");
+    renderCalendar();
+    console.log("Calendar rendered");
+  });
+}
 
 // Menu button (can be extended for mobile menu)
-$("#menuBtn").addEventListener("click",()=>{
-  const isCalView = $(".calendar-view").classList.contains("active");
-  if(isCalView){
-    $("#listViewBtn").click();
-  } else {
-    $("#calViewBtn").click();
-  }
-});
+const menuBtn = $("#menuBtn");
+if(menuBtn && calendarView && listViewBtn && calViewBtn){
+  menuBtn.addEventListener("click",()=>{
+    const isCalView = calendarView.classList.contains("active");
+    if(isCalView){
+      listViewBtn.click();
+    } else {
+      calViewBtn.click();
+    }
+  });
+}
 
 // Map Modal
 function openMapModal(){
@@ -1110,11 +1125,16 @@ if(!closeBtn){
 }
 
 // Close map modal when clicking outside the content
-$("#mapModal").addEventListener("click",(e)=>{
-  if(e.target === $("#mapModal") || e.target.classList.contains("map-modal-content")){
-    closeMapModal();
-  }
-});
+const mapModal = $("#mapModal");
+if(mapModal){
+  mapModal.addEventListener("click",(e)=>{
+    if(e.target === mapModal || e.target.classList.contains("map-modal-content")){
+      closeMapModal();
+    }
+  });
+} else {
+  console.error("Map modal element (#mapModal) not found for click listener!");
+}
 
 // Close map modal with Escape key
 document.addEventListener("keydown",(e)=>{
