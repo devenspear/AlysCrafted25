@@ -292,6 +292,8 @@
   </div>
 
 <script>
+console.log("🎉 Crafted 2025 Planner - Script Loading...");
+
 // ---------- Data (source: official Crafted site) ----------
 const EVENTS = [
   {
@@ -1040,6 +1042,7 @@ function showEventModal(e){
 
 // View switching
 $("#listViewBtn").addEventListener("click",()=>{
+  console.log("List view button clicked");
   $(".list-view").classList.add("active");
   $(".calendar-view").classList.remove("active");
   $("#listViewBtn").classList.add("active");
@@ -1047,11 +1050,14 @@ $("#listViewBtn").addEventListener("click",()=>{
 });
 
 $("#calViewBtn").addEventListener("click",()=>{
+  console.log("Calendar view button clicked");
   $(".calendar-view").classList.add("active");
   $(".list-view").classList.remove("active");
   $("#calViewBtn").classList.add("active");
   $("#listViewBtn").classList.remove("active");
+  console.log("Rendering calendar...");
   renderCalendar();
+  console.log("Calendar rendered");
 });
 
 // Menu button (can be extended for mobile menu)
@@ -1066,21 +1072,42 @@ $("#menuBtn").addEventListener("click",()=>{
 
 // Map Modal
 function openMapModal(){
-  $("#mapModal").classList.add("active");
+  console.log("Opening map modal");
+  const modal = $("#mapModal");
+  if(!modal){
+    console.error("Map modal element not found!");
+    return;
+  }
+  modal.classList.add("active");
   document.body.style.overflow = "hidden";
   document.body.style.position = "fixed";
   document.body.style.width = "100%";
+  console.log("Map modal opened, classes:", modal.className);
 }
 
 function closeMapModal(){
+  console.log("Closing map modal");
   $("#mapModal").classList.remove("active");
   document.body.style.overflow = "";
   document.body.style.position = "";
   document.body.style.width = "";
 }
 
-$("#showMapBtn").addEventListener("click", openMapModal);
-$("#closeMapBtn").addEventListener("click", closeMapModal);
+const mapBtn = $("#showMapBtn");
+const closeBtn = $("#closeMapBtn");
+
+if(!mapBtn){
+  console.error("Map button (#showMapBtn) not found!");
+} else {
+  console.log("Map button found, attaching listener");
+  mapBtn.addEventListener("click", openMapModal);
+}
+
+if(!closeBtn){
+  console.error("Close button (#closeMapBtn) not found!");
+} else {
+  closeBtn.addEventListener("click", closeMapModal);
+}
 
 // Close map modal when clicking outside the content
 $("#mapModal").addEventListener("click",(e)=>{
@@ -1098,6 +1125,12 @@ document.addEventListener("keydown",(e)=>{
 
 // Fetch weather on page load
 fetchWeather();
+
+console.log("✅ Crafted 2025 Planner - Fully Initialized!");
+console.log("📋 List view button:", $("#listViewBtn") ? "Found" : "NOT FOUND");
+console.log("📅 Calendar view button:", $("#calViewBtn") ? "Found" : "NOT FOUND");
+console.log("🗺️ Map button:", $("#showMapBtn") ? "Found" : "NOT FOUND");
+console.log("Total events loaded:", EVENTS.length);
 
 </script>
 </body>
