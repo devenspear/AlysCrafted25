@@ -47,8 +47,14 @@
       padding-top:env(safe-area-inset-top);
     }
     .wrap{max-width:1100px;margin:0 auto;padding:16px;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
-    h1{font-size:clamp(32px,3.8vw,48px);margin:0 0 8px;font-family:Georgia,serif;color:var(--brand);font-weight:400;letter-spacing:-0.02em}
-    .sub{color:var(--muted);font-size:18px;line-height:1.5}
+    h1{font-size:clamp(32px,3.8vw,48px);margin:0 0 8px;font-family:Georgia,serif;color:var(--brand);font-weight:400;letter-spacing:-0.02em;animation:headerPulse 4s ease-in-out infinite}
+    .h1-line1{display:block;margin-bottom:4px}
+    .h1-line2{display:block;font-size:0.75em;font-weight:300}
+    .sub{color:var(--muted);font-size:18px;line-height:1.5;margin-bottom:20px}
+    @keyframes headerPulse{
+      0%, 100%{opacity:1}
+      50%{opacity:0.85}
+    }
     .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     .btn{
       display:inline-flex;align-items:center;gap:8px;
@@ -228,7 +234,10 @@
 
   <header>
     <div class="wrap">
-      <h1>CRAFTED 2025 — The Spear Family Agenda</h1>
+      <h1>
+        <span class="h1-line1">CRAFTED 2025</span>
+        <span class="h1-line2">The Spear Family Agenda</span>
+      </h1>
       <div class="sub">November 12–16, 2025 • Alys Beach, Florida</div>
       <div class="cta-row">
         <a class="btn primary" href="https://www.alysbeachcrafted.com/" target="_blank" rel="noopener">Official Festival Site</a>
@@ -287,7 +296,7 @@
   <div class="map-modal" id="mapModal">
     <div class="map-modal-content">
       <button class="map-modal-close" id="closeMapBtn">×</button>
-      <img class="map-modal-img" src="2025 CRAFTED MAP.jpg.avif" alt="Crafted 2025 Event Map">
+      <img class="map-modal-img" src="2025 CRAFTED MAP.jpg" alt="Crafted 2025 Event Map">
     </div>
   </div>
 
@@ -311,7 +320,7 @@ const EVENTS = [
     music: "Live Acoustic Performance",
     environment: "Indoor Lounge",
     dressCode: "Resort Casual - Coastal Chic",
-    img: "Crafted_Images/Cafe Brulot Demonstration.jpg.avif"
+    img: "Crafted_Images/Cafe Brulot Demonstration.jpg"
   },
   {
     id: "songwriter-round",
@@ -328,7 +337,7 @@ const EVENTS = [
     music: "Singer-Songwriter Acoustic Session",
     environment: "Covered Outdoor Loggia",
     dressCode: "Resort Elegant - Garden Party Attire",
-    img: "Crafted_Images/davidandchris.jpg.avif",
+    img: "Crafted_Images/davidandchris.jpg",
     ticketed: true
   },
   {
@@ -346,7 +355,7 @@ const EVENTS = [
     music: "Caribbean Steel Drum & Reggae",
     environment: "Covered Outdoor Loggia",
     dressCode: "Tropical Elegant - Linen & Island Chic",
-    img: "Crafted_Images/Experiential Cocktail Dinner Boat Drinks Red Loggia.jpg.avif"
+    img: "Crafted_Images/Experiential Cocktail Dinner Boat Drinks Red Loggia.jpg"
   },
   {
     id: "dinner-brown-forman",
@@ -363,7 +372,7 @@ const EVENTS = [
     music: "Jazz Quartet",
     environment: "Indoor Fine Dining",
     dressCode: "Cocktail Attire - Sophisticated Evening",
-    img: "Crafted_Images/Experiential Dinner with Brown Forman Fonville Press.jpg.avif",
+    img: "Crafted_Images/Experiential Dinner with Brown Forman Fonville Press.jpg",
     ticketed: true
   },
   {
@@ -381,7 +390,7 @@ const EVENTS = [
     music: "Latin Acoustic Trio",
     environment: "Outdoor Garden Under the Stars",
     dressCode: "Garden Party Chic - Flowing & Festive",
-    img: "Crafted_Images/Experiential Dinner with Jose Medina Papilio Park.jpg.avif"
+    img: "Crafted_Images/Experiential Dinner with Jose Medina Papilio Park.jpg"
   },
   {
     id: "architectural-tour",
@@ -398,7 +407,7 @@ const EVENTS = [
     music: "None - Ambient Natural Sounds",
     environment: "Outdoor Walking Tour",
     dressCode: "Comfortable Walking Attire - Avoid Heels, Hat Recommended",
-    img: "Crafted_Images/Architecture Tour.jpg.avif",
+    img: "Crafted_Images/Architecture Tour.jpg",
     ticketed: true
   },
   {
@@ -416,7 +425,7 @@ const EVENTS = [
     music: "Background Acoustic & Folk",
     environment: "Open-Air Covered Amphitheatre",
     dressCode: "Casual - Shopping Comfortable",
-    img: "Crafted_Images/Holiday Makers Market Photo.jpg.avif",
+    img: "Crafted_Images/Holiday Makers Market Photo.jpg",
     ticketed: true
   },
   {
@@ -434,7 +443,7 @@ const EVENTS = [
     music: "Americana & Bluegrass Band",
     environment: "Outdoor Park Setting",
     dressCode: "Coastal Casual - Brewery Chic",
-    img: "Crafted_Images/crafted-firkin-fete-22a-print-37.jpg.avif",
+    img: "Crafted_Images/crafted-firkin-fete-22a-print-37.jpg",
     ticketed: true
   },
   {
@@ -452,7 +461,7 @@ const EVENTS = [
     music: "Live Acoustic & Local Musicians",
     environment: "Open-Air Covered Amphitheatre",
     dressCode: "Casual - Shopping Comfortable",
-    img: "Crafted_Images/Holiday Makers Market Photo-1.jpg.avif"
+    img: "Crafted_Images/Holiday Makers Market Photo-1.jpg"
   },
   {
     id: "maker-workshop",
@@ -469,7 +478,7 @@ const EVENTS = [
     music: "Soft Background Music",
     environment: "Outdoor Covered Workshop Area",
     dressCode: "Casual & Comfortable - Craft-Friendly",
-    img: "Crafted_Images/Holiday Makers Market Photo.jpg.avif"
+    img: "Crafted_Images/Holiday Makers Market Photo.jpg"
   },
   {
     id: "spirited-soiree",
@@ -486,7 +495,7 @@ const EVENTS = [
     music: "Multiple Stations - Jazz, Classical, & Acoustic",
     environment: "Outdoor Progressive Walking Route",
     dressCode: "Resort Chic - Hat Recommended, Comfortable Shoes",
-    img: "Crafted_Images/Spirited Soiree Photo.jpg.avif",
+    img: "Crafted_Images/Spirited Soiree Photo.jpg",
     ticketed: true
   },
   {
@@ -504,7 +513,7 @@ const EVENTS = [
     music: "Sunday Morning Acoustic Sets",
     environment: "Open-Air Covered Amphitheatre",
     dressCode: "Casual - Sunday Comfortable",
-    img: "Crafted_Images/Holiday Makers Market Photo.jpg.avif"
+    img: "Crafted_Images/Holiday Makers Market Photo.jpg"
   },
   {
     id: "kids-workshop",
@@ -521,7 +530,7 @@ const EVENTS = [
     music: "Fun Upbeat Kids' Background Music",
     environment: "Outdoor Covered Kids' Area",
     dressCode: "Play Clothes - Art-Friendly (May Get Messy)",
-    img: "Crafted_Images/Be the Maker - Marilu Doodles.jpg.avif"
+    img: "Crafted_Images/Be the Maker - Marilu Doodles.jpg"
   },
   {
     id: "pickleball-picklebacks",
@@ -538,7 +547,7 @@ const EVENTS = [
     music: "Live Coastal Beach Band",
     environment: "Outdoor Beach Club & Courts",
     dressCode: "Athletic Casual - Beach Club Style",
-    img: "Crafted_Images/Pickleball & Picklebacks Photo.jpg.avif",
+    img: "Crafted_Images/Pickleball & Picklebacks Photo.jpg",
     ticketed: true
   },
 ];
@@ -830,7 +839,13 @@ function getCategoryClass(event){
 }
 
 function renderCalendar(){
+  console.log("renderCalendar() called");
   const container = $("#calendarView");
+  if(!container){
+    console.error("Calendar view container (#calendarView) not found!");
+    return;
+  }
+  console.log("Calendar container found, rendering...");
   const eventsByDay = {};
 
   EVENTS.forEach(e=>{
@@ -950,6 +965,8 @@ function renderCalendar(){
 
   // Add now indicator if festival is happening
   addNowIndicator();
+
+  console.log("✓ Calendar rendering complete. Event blocks added:", $$(".timeline-event-block").length);
 }
 
 function showEventTooltip(event, mouseEvent, tooltip){
@@ -1052,24 +1069,31 @@ if(!listView) console.error("List view element (.list-view) not found!");
 if(!calendarView) console.error("Calendar view element (.calendar-view) not found!");
 
 if(listViewBtn && calViewBtn && listView && calendarView){
-  listViewBtn.addEventListener("click",()=>{
-    console.log("List view button clicked");
+  console.log("All view elements found, attaching view switch listeners");
+
+  listViewBtn.addEventListener("click",(e)=>{
+    e.preventDefault();
+    console.log("List view button CLICKED!");
     listView.classList.add("active");
     calendarView.classList.remove("active");
     listViewBtn.classList.add("active");
     calViewBtn.classList.remove("active");
+    console.log("Switched to list view. List display:", window.getComputedStyle(listView).display);
   });
 
-  calViewBtn.addEventListener("click",()=>{
-    console.log("Calendar view button clicked");
+  calViewBtn.addEventListener("click",(e)=>{
+    e.preventDefault();
+    console.log("Calendar view button CLICKED!");
     calendarView.classList.add("active");
     listView.classList.remove("active");
     calViewBtn.classList.add("active");
     listViewBtn.classList.remove("active");
+    console.log("Active classes applied. Calendar display:", window.getComputedStyle(calendarView).display);
     console.log("Rendering calendar...");
     renderCalendar();
-    console.log("Calendar rendered");
   });
+} else {
+  console.error("View switching setup FAILED - some elements missing");
 }
 
 // Menu button (can be extended for mobile menu)
@@ -1088,40 +1112,56 @@ if(menuBtn && calendarView && listViewBtn && calViewBtn){
 // Map Modal
 function openMapModal(){
   console.log("Opening map modal");
-  const modal = $("#mapModal");
+  const modal = document.getElementById("mapModal");
   if(!modal){
     console.error("Map modal element not found!");
     return;
   }
+  console.log("Modal element found, adding active class");
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
   document.body.style.position = "fixed";
   document.body.style.width = "100%";
-  console.log("Map modal opened, classes:", modal.className);
+  console.log("Map modal opened, display style:", window.getComputedStyle(modal).display);
 }
 
 function closeMapModal(){
   console.log("Closing map modal");
-  $("#mapModal").classList.remove("active");
+  const modal = document.getElementById("mapModal");
+  if(!modal){
+    console.error("Map modal element not found!");
+    return;
+  }
+  modal.classList.remove("active");
   document.body.style.overflow = "";
   document.body.style.position = "";
   document.body.style.width = "";
+  console.log("Map modal closed");
 }
 
-const mapBtn = $("#showMapBtn");
-const closeBtn = $("#closeMapBtn");
+const mapBtn = document.getElementById("showMapBtn");
+const closeBtn = document.getElementById("closeMapBtn");
 
 if(!mapBtn){
   console.error("Map button (#showMapBtn) not found!");
 } else {
   console.log("Map button found, attaching listener");
-  mapBtn.addEventListener("click", openMapModal);
+  mapBtn.addEventListener("click", function(e){
+    console.log("Map button CLICKED!");
+    e.preventDefault();
+    openMapModal();
+  });
 }
 
 if(!closeBtn){
   console.error("Close button (#closeMapBtn) not found!");
 } else {
-  closeBtn.addEventListener("click", closeMapModal);
+  console.log("Close button found, attaching listener");
+  closeBtn.addEventListener("click", function(e){
+    console.log("Close button CLICKED!");
+    e.preventDefault();
+    closeMapModal();
+  });
 }
 
 // Close map modal when clicking outside the content
