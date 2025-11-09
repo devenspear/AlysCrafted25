@@ -1,0 +1,1083 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#004978" />
+  <title>Crafted 2025 — The Spear Family Agenda</title>
+  <meta name="description" content="The Spear Family schedule for Crafted 2025 at Alys Beach, November 12–16, 2025."/>
+  <style>
+    :root{
+      --bg:#FFFFFF;
+      --panel:#FAFAFA;
+      --ink:#4D4D4D;
+      --muted:#696960;
+      --accent:#004978;
+      --chip:#F5F5F5;
+      --good:#61a229;
+      --warn:#fde68a;
+      --danger:#fca5a5;
+      --link:#00548E;
+      --brand:#004978;
+      --border:#E0E0E0;
+      --hover:#003a60;
+    }
+    *{box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,73,120,0.1)}
+    html,body{height:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    body{
+      margin:0;
+      font:24px/1.6 system-ui, -apple-system, sans-serif;
+      color:var(--ink);
+      background:#FFFFFF;
+      touch-action:manipulation;
+    }
+    header{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:saturate(1.2) blur(12px);
+      background:rgba(255,255,255,0.95);
+      border-bottom:1px solid var(--border);
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:16px}
+    h1{font-size:clamp(32px,3.8vw,48px);margin:0 0 8px;font-family:Georgia,serif;color:var(--brand);font-weight:400;letter-spacing:-0.02em}
+    .sub{color:var(--muted);font-size:18px;line-height:1.5}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:12px 20px;border-radius:4px;border:1px solid var(--accent);
+      background:#FFFFFF;
+      color:var(--accent);text-decoration:none;font-weight:600;
+      font-family:system-ui,-apple-system,sans-serif;font-size:16px;
+      transition:all 0.2s ease;cursor:pointer;
+    }
+    .btn:hover{background:var(--accent);color:#FFFFFF;border-color:var(--hover)}
+    .btn.primary{background:var(--accent);color:#FFFFFF;border-color:var(--accent)}
+    .btn.primary:hover{background:var(--hover);border-color:var(--hover)}
+    .btn.ghost{background:transparent;border-color:var(--border);color:var(--ink)}
+    .btn.ghost:hover{background:var(--panel);border-color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:20px}
+    @media (min-width:900px){ .grid{grid-template-columns:280px 1fr} }
+    .panel{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+    .filters h3,.plan h3{margin:0 0 12px;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);font-weight:700;font-family:system-ui,-apple-system,sans-serif}
+    .days{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}
+    .chip{
+      border:1px solid var(--border);background:#FFFFFF;
+      color:var(--ink);padding:8px 14px;border-radius:20px;
+      cursor:pointer;user-select:none;font-size:13px;font-family:system-ui,-apple-system,sans-serif;
+      transition:all 0.2s ease;
+    }
+    .chip:hover{border-color:var(--accent);background:var(--panel)}
+    .chip.active{background:var(--accent);color:#FFFFFF;border-color:var(--accent)}
+    .cats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+    .cat{padding:7px 12px;border-radius:20px;border:1px solid var(--border);background:#FFFFFF;color:var(--ink);font-size:13px;cursor:pointer;font-family:system-ui,-apple-system,sans-serif;transition:all 0.2s ease}
+    .cat:hover{border-color:var(--accent);background:var(--panel)}
+    .cat.active{background:var(--accent);color:#FFFFFF;border-color:var(--accent)}
+    .search{display:flex;gap:8px;margin:12px 0}
+    .search input{
+      width:100%;padding:11px 14px;border-radius:4px;border:1px solid var(--border);background:#FFFFFF;color:var(--ink);
+      font-family:system-ui,-apple-system,sans-serif;font-size:14px;transition:all 0.2s ease;
+    }
+    .search input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 2px rgba(0,73,120,0.1)}
+    .event-list{display:grid;grid-template-columns:1fr;gap:16px}
+    .event{
+      display:flex;flex-direction:row;gap:0;padding:0;border-radius:8px;
+      border:1px solid var(--border);background:#FFFFFF;overflow:hidden;
+      transition:all 0.2s ease;box-shadow:0 1px 3px rgba(0,0,0,0.05);
+    }
+    .event:hover{box-shadow:0 4px 12px rgba(0,0,0,0.1);transform:translateY(-2px)}
+    .event-img{width:140px;min-width:140px;height:140px;background-size:cover;background-position:center;background-color:var(--panel);order:2;object-fit:cover}
+    .event-content{padding:16px;flex:1;order:1;display:flex;flex-direction:column;gap:8px}
+    .event .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+    .event h4{margin:0;font-size:18px;color:var(--brand);font-family:Georgia,serif;font-weight:400;line-height:1.3}
+    .tag{font-size:11px;padding:4px 10px;border-radius:12px;border:1px solid var(--border);background:var(--panel);color:var(--muted);white-space:nowrap;font-family:system-ui,-apple-system,sans-serif}
+    .meta{color:var(--muted);font-size:14px;font-family:system-ui,-apple-system,sans-serif}
+    .event-day-time{display:flex;gap:12px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+    .day-badge{font-size:20px;font-weight:700;color:var(--brand);font-family:system-ui,-apple-system,sans-serif}
+    .time-badge{font-size:18px;font-weight:700;color:var(--accent);font-family:system-ui,-apple-system,sans-serif}
+    .event .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+    .event p{margin:4px 0;line-height:1.5}
+    .pill{font-size:12px;padding:7px 12px;border-radius:4px;border:1px solid var(--border);background:#FFFFFF;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-family:system-ui,-apple-system,sans-serif;transition:all 0.2s ease;cursor:pointer}
+    .pill:hover{background:var(--panel);border-color:var(--accent)}
+    .pin{cursor:pointer;font-weight:600}
+    .pin:hover{background:var(--good);color:#FFFFFF;border-color:var(--good)}
+    .plan .plan-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    .small{font-size:13px;color:var(--muted);font-family:system-ui,-apple-system,sans-serif;line-height:1.5}
+    footer{margin:32px 0 60px;color:var(--muted);font-size:14px;font-family:system-ui,-apple-system,sans-serif}
+    .kbd{border:1px solid var(--border);border-bottom:2px solid var(--muted);border-radius:4px;padding:3px 8px;font-size:12px;background:var(--panel);color:var(--ink);font-family:monospace}
+    .hero-note{margin-top:12px;padding:14px;border-radius:6px;background:var(--panel);border:1px solid var(--border);color:var(--ink);font-size:14px}
+    .count{font-weight:700;color:var(--accent)}
+    .empty{color:var(--muted);font-style:italic}
+    .map-note{display:flex;align-items:center;gap:8px;margin-top:8px}
+    .map-note a{color:var(--link);text-decoration:none;border-bottom:1px solid var(--link)}
+    .map-note a:hover{color:var(--hover);border-bottom-color:var(--hover)}
+    .brand{color:var(--accent);font-weight:600}
+    .clear-cats{margin-top:8px}
+    .menu-btn{position:fixed;top:80px;right:20px;z-index:100;width:56px;height:56px;border-radius:50%;background:var(--accent);color:#FFFFFF;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(0,73,120,0.3);display:flex;align-items:center;justify-content:center;font-size:24px;transition:all 0.3s ease;font-family:system-ui,-apple-system,sans-serif}
+    .menu-btn:hover{transform:scale(1.1) rotate(90deg);background:var(--hover);box-shadow:0 6px 16px rgba(0,73,120,0.4)}
+    .menu-btn:active{transform:scale(0.95)}
+    .view-toggle{display:flex;gap:12px;margin-bottom:16px;margin-top:16px}
+    .view-btn{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 12px;border-radius:12px;border:2px solid var(--border);background:#FFFFFF;color:var(--ink);cursor:pointer;transition:all 0.3s ease;font-family:system-ui,-apple-system,sans-serif;min-height:80px}
+    .view-btn:hover{border-color:var(--accent);background:var(--panel);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,73,120,0.15)}
+    .view-btn.active{background:var(--accent);color:#FFFFFF;border-color:var(--accent);box-shadow:0 6px 16px rgba(0,73,120,0.3)}
+    .view-btn.active:hover{transform:translateY(-1px)}
+    .view-icon{font-size:28px;line-height:1}
+    .view-label{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em}
+    .calendar-view{display:none;min-height:600px}
+    .calendar-view.active{display:block}
+    .list-view.active{display:block}
+    .list-view{display:none}
+    .timeline-grid-wrapper{overflow-x:auto;overflow-y:auto;max-height:1000px;border:1px solid var(--border);border-radius:8px;background:#FFFFFF}
+    .timeline-grid{display:grid;grid-template-columns:80px repeat(7,minmax(140px,1fr));min-width:1000px;position:relative;background:linear-gradient(to bottom,#FFFFFF 0%,var(--panel) 100%)}
+    .time-ruler{grid-column:1;position:sticky;left:0;background:#FFFFFF;z-index:5;border-right:2px solid var(--border)}
+    .time-slot{height:100px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--muted);font-family:system-ui,-apple-system,sans-serif;background:#FFFFFF}
+    .day-column{position:relative;border-right:1px solid var(--border);min-height:100%}
+    .day-column-header{position:sticky;top:0;z-index:4;background:var(--accent);color:#FFFFFF;padding:12px 8px;text-align:center;font-weight:700;font-size:14px;border-bottom:2px solid var(--border);font-family:system-ui,-apple-system,sans-serif;min-height:60px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+    .day-column-body{position:relative;min-height:100%}
+    .time-grid-bg{position:absolute;top:0;left:0;right:0;pointer-events:none}
+    .time-grid-line{height:100px;border-bottom:1px solid rgba(0,0,0,0.05)}
+    .timeline-event-block{position:absolute;left:4px;right:4px;background:#FFFFFF;border:1px solid var(--border);border-radius:6px;padding:8px;cursor:pointer;transition:all 0.2s ease;overflow:hidden;box-shadow:0 2px 4px rgba(0,0,0,0.1);border-left-width:4px}
+    .timeline-event-block:hover{box-shadow:0 6px 12px rgba(0,73,120,0.25);transform:translateY(-2px) scale(1.02);z-index:10}
+    .event-tooltip{position:fixed;z-index:1000;background:#FFFFFF;border:2px solid var(--accent);border-radius:12px;padding:16px;box-shadow:0 12px 32px rgba(0,0,0,0.2);max-width:380px;pointer-events:none;opacity:0;transition:opacity 0.2s ease;font-family:system-ui,-apple-system,sans-serif}
+    .event-tooltip.visible{opacity:1}
+    .event-tooltip-img{width:100%;height:140px;background-size:cover;background-position:center;border-radius:8px;margin-bottom:12px}
+    .event-tooltip-title{font-size:18px;font-weight:700;color:var(--brand);margin-bottom:8px;line-height:1.3}
+    .event-tooltip-time{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:8px}
+    .event-tooltip-location{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .event-tooltip-desc{font-size:13px;color:var(--ink);line-height:1.5;margin-bottom:8px;max-height:100px;overflow-y:auto}
+    .event-tooltip-meta{font-size:12px;color:var(--muted);padding-top:8px;border-top:1px solid var(--border)}
+    .event-tooltip-categories{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+    .ticketed-badge{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#ca8a04 0%,#d97706 100%);color:#FFFFFF;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;box-shadow:0 2px 6px rgba(202,138,4,0.3);font-family:system-ui,-apple-system,sans-serif}
+    .ticketed-badge-icon{font-size:14px}
+    .timeline-event-block .event-time-block{font-size:11px;font-weight:700;color:var(--accent);margin-bottom:4px;font-family:system-ui,-apple-system,sans-serif}
+    .timeline-event-block .event-title-block{font-size:13px;font-weight:600;color:var(--brand);line-height:1.2;margin-bottom:4px;font-family:system-ui,-apple-system,sans-serif;overflow:hidden;text-overflow:ellipsis}
+    .timeline-event-block .event-thumb{width:100%;height:40px;background-size:cover;background-position:center;border-radius:4px;margin-top:4px}
+    .timeline-event-block.compact .event-thumb{display:none}
+    .now-indicator{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,#ff0000 0%,#ff6b6b 100%);z-index:3;pointer-events:none;box-shadow:0 0 8px rgba(255,0,0,0.5)}
+    .now-indicator::before{content:'NOW';position:absolute;left:84px;top:-10px;background:#ff0000;color:#FFFFFF;font-size:9px;font-weight:700;padding:2px 6px;border-radius:3px;font-family:system-ui,-apple-system,sans-serif}
+    .category-Music{border-left-color:#9333ea}
+    .category-Dinner{border-left-color:#059669}
+    .category-Tasting{border-left-color:#dc2626}
+    .category-Tour{border-left-color:#2563eb}
+    .category-Market{border-left-color:#d97706}
+    .category-Workshop{border-left-color:#7c3aed}
+    .category-Play{border-left-color:#0891b2}
+    .category-Signature{border-left-color:#ca8a04}
+    .category-Family{border-left-color:#ec4899}
+    .category-Design{border-left-color:#6366f1}
+    .category-Demo{border-left-color:#14b8a6}
+    .category-Brunch{border-left-color:#f59e0b}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .map-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.9);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px}
+    .map-modal.active{display:flex}
+    .map-modal-content{position:relative;max-width:95vw;max-height:95vh;background:#FFFFFF;border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+    .map-modal-close{position:absolute;top:16px;right:16px;background:var(--accent);color:#FFFFFF;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:24px;display:flex;align-items:center;justify-content:center;z-index:10;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:all 0.2s ease}
+    .map-modal-close:hover{background:var(--hover);transform:scale(1.1)}
+    .map-modal-img{width:100%;height:100%;object-fit:contain;display:block}
+    @media (max-width:768px){
+      .wrap{padding:12px}
+      h1{font-size:24px;margin-bottom:6px}
+      .sub{font-size:14px}
+      .cta-row{gap:8px}
+      .btn{padding:10px 16px;font-size:14px}
+      .view-toggle{gap:10px}
+      .view-btn{padding:12px 8px;min-height:70px}
+      .view-icon{font-size:24px}
+      .view-label{font-size:12px}
+      .grid{grid-template-columns:1fr;gap:12px}
+      .panel{padding:16px}
+      .event{flex-direction:column}
+      .event-img{width:100%;height:160px;order:1}
+      .event-content{order:2;padding:16px}
+      .event h4{font-size:18px;margin-bottom:8px}
+      .event-day-time{gap:8px;margin-bottom:10px}
+      .day-badge{font-size:16px}
+      .time-badge{font-size:14px}
+      .ticketed-badge{font-size:10px;padding:3px 8px}
+      .meta{font-size:13px;margin-bottom:6px}
+      .small{font-size:14px;line-height:1.6}
+      .pill{padding:10px 16px;font-size:14px}
+      .menu-btn{top:60px;right:12px;width:50px;height:50px;font-size:22px}
+      .timeline-grid{grid-template-columns:60px repeat(7,minmax(100px,1fr));font-size:10px}
+      .day-column-header{font-size:11px;padding:8px 4px;min-height:50px}
+      .timeline-event-block{padding:6px;font-size:10px}
+      .event-time-block{font-size:10px}
+      .event-title-block{font-size:11px}
+      .filters h3{font-size:12px}
+      .chip{font-size:12px;padding:6px 12px}
+      .cat{font-size:12px;padding:6px 10px}
+    }
+  </style>
+</head>
+<body>
+  <button class="menu-btn" id="menuBtn" title="Toggle Menu">☰</button>
+
+  <header>
+    <div class="wrap">
+      <h1>CRAFTED 2025 — The Spear Family Agenda</h1>
+      <div class="sub">November 12–16, 2025 • Alys Beach, Florida</div>
+      <div class="cta-row">
+        <a class="btn primary" href="https://www.alysbeachcrafted.com/" target="_blank" rel="noopener">Official Festival Site</a>
+        <button class="btn" id="showMapBtn">📍 Event Map</button>
+      </div>
+      <div class="view-toggle">
+        <button class="view-btn active" id="listViewBtn">
+          <span class="view-icon">📋</span>
+          <span class="view-label">List View</span>
+        </button>
+        <button class="view-btn" id="calViewBtn">
+          <span class="view-icon">📅</span>
+          <span class="view-label">Calendar View</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="list-view active">
+      <div class="grid">
+        <aside class="panel filters">
+          <h3>Days</h3>
+          <div class="days" id="dayChips"></div>
+
+          <h3>Categories</h3>
+          <div class="cats" id="catChips"></div>
+          <button class="btn ghost clear-cats" id="clearCats" style="width:100%;justify-content:center">Clear Categories</button>
+
+          <div class="search">
+            <input id="q" type="search" placeholder="Search title, location, or description…" aria-label="Search events">
+          </div>
+
+          <div class="small">Showing <span class="count" id="count">0</span> events.</div>
+          <div class="map-note small">Need bearings? Open the <a href="https://www.alysbeachcrafted.com/event-map" target="_blank" rel="noopener">2025 event map</a>.</div>
+        </aside>
+
+        <section>
+          <div class="panel">
+            <div class="event-list" id="list"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="calendar-view" id="calendarView">
+      <!-- Timeline grid will be rendered here by JavaScript -->
+    </div>
+  </main>
+
+  <footer class="wrap">
+    Built for the Alys Beach <span class="brand">Crafted 2025</span> week. Times and details are as published by organizers; always confirm on the official site before you go. © 2025.
+  </footer>
+
+  <!-- Map Modal -->
+  <div class="map-modal" id="mapModal">
+    <div class="map-modal-content">
+      <button class="map-modal-close" id="closeMapBtn">×</button>
+      <img class="map-modal-img" src="2025 CRAFTED MAP.jpg.avif" alt="Crafted 2025 Event Map">
+    </div>
+  </div>
+
+<script>
+// ---------- Data (source: official Crafted site) ----------
+const EVENTS = [
+  {
+    id: "neat-wine-song",
+    title: "Fired Up at NEAT: A Special Crafted Edition of Wine & Song",
+    date: "2025-11-11",
+    start: "17:00",
+    end: "19:00",
+    tz: "America/Chicago",
+    location: "NEAT Bottle Shop & Tasting Room",
+    where: "NEAT Bottle Shop & Tasting Room, Alys Beach Town Center",
+    category: ["Music","Demo","Tasting"],
+    url: "https://www.alysbeachcrafted.com/events/caf%C3%A9-brulot-demonstration-%2B-the-obituary-cocktail-book-signing-with-sue-strachan",
+    description: "Join us for an intimate evening celebrating legendary New Orleans cocktails with author Sue Strachan. Experience a complimentary café brûlot demonstration and book signing of 'The Obituary Cocktail,' accompanied by live music. This special Crafted edition kicks off the weekend with classic Southern hospitality and spirited conversation.",
+    music: "Live Acoustic Performance",
+    environment: "Indoor Lounge",
+    dressCode: "Resort Casual - Coastal Chic",
+    img: "Crafted_Images/Cafe Brulot Demonstration.jpg.avif"
+  },
+  {
+    id: "songwriter-round",
+    title: "Songwriter Round Table: David Ryan Harris + Chris Stills",
+    date: "2025-11-12",
+    start: "17:30",
+    end: "19:30",
+    tz: "America/Chicago",
+    location: "Red Loggia at Caliza",
+    where: "Red Loggia at Caliza Restaurant, Alys Beach",
+    category: ["Music","Tasting"],
+    url: "https://www.alysbeachcrafted.com/events/songwriter-round-table-session-with-david-ryan-harris-%2B-chris-stills",
+    description: "Experience an intimate songwriter round table session with acclaimed musicians David Ryan Harris (John Mayer, Dave Matthews Band) and Chris Stills (son of Stephen Stills). Presented in partnership with the Cultural Arts Alliance of Walton County, this exclusive evening features original performances, storytelling behind the songs, and curated beverages and bites inspired by the artists' journeys.",
+    music: "Singer-Songwriter Acoustic Session",
+    environment: "Covered Outdoor Loggia",
+    dressCode: "Resort Elegant - Garden Party Attire",
+    img: "Crafted_Images/davidandchris.jpg.avif",
+    ticketed: true
+  },
+  {
+    id: "dinner-boatdrinks",
+    title: "Experiential Dinner: Boat Drinks + Worthy Park Estate Rum",
+    date: "2025-11-13",
+    start: "17:00",
+    end: "20:30",
+    tz: "America/Chicago",
+    location: "Red Loggia at Caliza",
+    where: "Red Loggia at Caliza Restaurant, Alys Beach",
+    category: ["Dinner","Tasting"],
+    url: "https://www.alysbeachcrafted.com/events/boat-drinks-%2B-worthy-park-estate-rum",
+    description: "Embark on a Caribbean culinary journey with this exclusive Jamaican rum exploration dinner. Boat Drinks restaurant from St. Augustine partners with Worthy Park Estate, one of Jamaica's oldest sugar estates and rum producers, to create a multi-course dinner featuring expertly paired rums from their estate collection. Each course highlights traditional and contemporary Caribbean flavors, with rum pairings selected to complement the chef's creative vision.",
+    music: "Caribbean Steel Drum & Reggae",
+    environment: "Covered Outdoor Loggia",
+    dressCode: "Tropical Elegant - Linen & Island Chic",
+    img: "Crafted_Images/Experiential Cocktail Dinner Boat Drinks Red Loggia.jpg.avif"
+  },
+  {
+    id: "dinner-brown-forman",
+    title: "Experiential Dinner: Barrels Worth Knowing (Brown‑Forman)",
+    date: "2025-11-13",
+    start: "17:00",
+    end: "20:30",
+    tz: "America/Chicago",
+    location: "Fonville Press",
+    where: "Fonville Press Restaurant, Alys Beach",
+    category: ["Dinner","Tasting"],
+    url: "https://www.alysbeachcrafted.com/events/brown-foreman-and-featured-crafted-mixologists-%2B-fonville-press",
+    description: "Discover the art of barrel-aged spirits at this sophisticated dinner experience featuring Brown-Forman's premium portfolio. Journey through American whiskey, tequila, and rum with multi-course pairings showcasing Jack Daniel's Tennessee Whiskey, Woodford Reserve Bourbon, Herradura Tequila, and Diplomático Rum. Featured Crafted mixologists will create bespoke cocktails for each course, while Fonville Press's culinary team crafts complementary dishes that highlight the unique characteristics of each spirit.",
+    music: "Jazz Quartet",
+    environment: "Indoor Fine Dining",
+    dressCode: "Cocktail Attire - Sophisticated Evening",
+    img: "Crafted_Images/Experiential Dinner with Brown Forman Fonville Press.jpg.avif",
+    ticketed: true
+  },
+  {
+    id: "dinner-jose-medina",
+    title: "Experiential Dinner: Jose Medina Camacho + Heavy Met'l Imports",
+    date: "2025-11-13",
+    start: "17:00",
+    end: "20:30",
+    tz: "America/Chicago",
+    location: "Papilio Park",
+    where: "Papilio Park, Alys Beach Town Center",
+    category: ["Dinner","Tasting"],
+    url: "https://www.alysbeachcrafted.com/events/jose-medina-camacho-with-heavy-met%E2%80%99l-imports-%2B-alys-beach-culinary",
+    description: "James Beard Award finalist Jose Medina Camacho brings his celebrated Latin American culinary artistry to Alys Beach in collaboration with Heavy Met'l Imports and Alys Beach Culinary. This spirited mixology dinner showcases contemporary Latin flavors paired with premium imported spirits. Chef Medina Camacho's innovative approach to traditional dishes creates an unforgettable evening where food, spirits, and culture converge under the stars at beautiful Papilio Park.",
+    music: "Latin Acoustic Trio",
+    environment: "Outdoor Garden Under the Stars",
+    dressCode: "Garden Party Chic - Flowing & Festive",
+    img: "Crafted_Images/Experiential Dinner with Jose Medina Papilio Park.jpg.avif"
+  },
+  {
+    id: "architectural-tour",
+    title: "Architectural Tour (Guided)",
+    date: "2025-11-14",
+    start: "13:00",
+    end: "14:30",
+    tz: "America/Chicago",
+    location: "North Sea Garden Walk",
+    where: "North Pedestrian Path, Alys Beach (meet at North Sea Garden Walk)",
+    category: ["Tour","Design"],
+    url: "https://www.alysbeachcrafted.com/events/architectural-tour-",
+    description: "Explore the award-winning architecture of Alys Beach on this exclusive guided walking tour led by Town Architect Marieanne Khoury-Vogt. Discover the inspiration behind the stunning white courtyard buildings, geometric forms, and Bermudian-influenced design that has made Alys Beach an architectural destination. Walk the pedestrian paths, hidden alleys, and courtyards while learning about the sustainable design principles and attention to detail that define this unique coastal community.",
+    music: "None - Ambient Natural Sounds",
+    environment: "Outdoor Walking Tour",
+    dressCode: "Comfortable Walking Attire - Avoid Heels, Hat Recommended",
+    img: "Crafted_Images/Architecture Tour.jpg.avif",
+    ticketed: true
+  },
+  {
+    id: "makers-market-fri",
+    title: "Holiday Makers Market — Friday",
+    date: "2025-11-14",
+    start: "14:00",
+    end: "16:30",
+    tz: "America/Chicago",
+    location: "Alys Beach Amphitheatre",
+    where: "Alys Beach Amphitheatre, Town Center",
+    category: ["Market","Family"],
+    url: "https://www.alysbeachcrafted.com/events/holiday-makers-market-friday",
+    description: "Browse beautifully curated artisan goods perfect for holiday gifting at the Holiday Makers Market. This free, family-friendly market showcases local and regional makers, featuring handcrafted jewelry, artwork, home décor, textiles, and seasonal treasures. Support the creative community while finding unique, one-of-a-kind pieces. The market continues Saturday and Sunday with rotating vendors. Free and open to the public.",
+    music: "Background Acoustic & Folk",
+    environment: "Open-Air Covered Amphitheatre",
+    dressCode: "Casual - Shopping Comfortable",
+    img: "Crafted_Images/Holiday Makers Market Photo.jpg.avif",
+    ticketed: true
+  },
+  {
+    id: "firkin-fete",
+    title: "Firkin Fête",
+    date: "2025-11-14",
+    start: "18:30",
+    end: "21:00",
+    tz: "America/Chicago",
+    location: "Central Park",
+    where: "Central Park, Alys Beach",
+    category: ["Tasting","Signature"],
+    url: "https://www.alysbeachcrafted.com/events/firkin-fete",
+    description: "Celebrate craft beer culture at this signature Firkin Fête evening in Central Park. Tap into rare, small-batch firkins (cask-conditioned ales) from exceptional regional breweries across the Southeast. Each brewery brings their finest limited-release and specialty firkins, complemented by chef-prepared bites designed to enhance the tasting experience. Sample unique styles, meet the brewers, and enjoy the festive atmosphere under the oaks. This is craft beer appreciation at its finest.",
+    music: "Americana & Bluegrass Band",
+    environment: "Outdoor Park Setting",
+    dressCode: "Coastal Casual - Brewery Chic",
+    img: "Crafted_Images/crafted-firkin-fete-22a-print-37.jpg.avif",
+    ticketed: true
+  },
+  {
+    id: "makers-market-sat",
+    title: "Holiday Makers Market — Saturday",
+    date: "2025-11-15",
+    start: "10:00",
+    end: "14:00",
+    tz: "America/Chicago",
+    location: "Alys Beach Amphitheatre",
+    where: "Alys Beach Amphitheatre, Town Center",
+    category: ["Market","Family"],
+    url: "https://www.alysbeachcrafted.com/events/holiday-makers-market-saturday",
+    description: "Day two of the Holiday Makers Market features an expanded selection of curated artisan goods and handcrafted treasures. Discover unique jewelry, pottery, textiles, artwork, and home goods from talented regional makers. Perfect for early holiday shopping or treating yourself to something special. Enjoy live acoustic music while you browse. Free and open to the public.",
+    music: "Live Acoustic & Local Musicians",
+    environment: "Open-Air Covered Amphitheatre",
+    dressCode: "Casual - Shopping Comfortable",
+    img: "Crafted_Images/Holiday Makers Market Photo-1.jpg.avif"
+  },
+  {
+    id: "maker-workshop",
+    title: "Be the Maker Workshop with Sugarbird 30A",
+    date: "2025-11-15",
+    start: "11:00",
+    end: "12:30",
+    tz: "America/Chicago",
+    location: "Splash Pad, Alys Beach Amphitheatre",
+    where: "Splash Pad area, Alys Beach Amphitheatre",
+    category: ["Workshop","Family"],
+    url: "https://www.alysbeachcrafted.com/events/be-the-maker-workshop",
+    description: "Unleash your creativity in this hands-on making session led by the talented team from Sugarbird 30A. Adults are invited to create their own artisan piece under expert guidance, exploring techniques in mixed media, design, and craftsmanship. All materials provided. Take home your unique creation and newfound skills. Limited capacity - advance registration recommended.",
+    music: "Soft Background Music",
+    environment: "Outdoor Covered Workshop Area",
+    dressCode: "Casual & Comfortable - Craft-Friendly",
+    img: "Crafted_Images/Holiday Makers Market Photo.jpg.avif"
+  },
+  {
+    id: "spirited-soiree",
+    title: "Spirited Soirée",
+    date: "2025-11-15",
+    start: "13:00",
+    end: "16:00",
+    tz: "America/Chicago",
+    location: "North Sea Garden Walk",
+    where: "North Pedestrian Path & Sea Garden Walk, Alys Beach",
+    category: ["Tasting","Signature"],
+    url: "https://www.alysbeachcrafted.com/events/spirited-soir%C3%A9e",
+    description: "Experience the pinnacle of Crafted 2025 at the Spirited Soirée, a progressive tasting journey along Alys Beach's iconic North Pedestrian Path. Stroll the picturesque white-walled walkways while sampling from dozens of exceptional mixologist-distillery pairings stationed throughout the route. Each stop features premium spirits served both neat and in handcrafted cocktails, complemented by artisan bites. From bourbon to tequila, rum to gin, discover new favorites while enjoying the stunning architecture and gulf breezes. This is the signature tasting event of the weekend.",
+    music: "Multiple Stations - Jazz, Classical, & Acoustic",
+    environment: "Outdoor Progressive Walking Route",
+    dressCode: "Resort Chic - Hat Recommended, Comfortable Shoes",
+    img: "Crafted_Images/Spirited Soiree Photo.jpg.avif",
+    ticketed: true
+  },
+  {
+    id: "makers-market-sun",
+    title: "Holiday Makers Market — Sunday",
+    date: "2025-11-16",
+    start: "10:00",
+    end: "14:00",
+    tz: "America/Chicago",
+    location: "Alys Beach Amphitheatre",
+    where: "Alys Beach Amphitheatre, Town Center",
+    category: ["Market","Family"],
+    url: "https://www.alysbeachcrafted.com/events/holiday-makers-market-sunday",
+    description: "The final day of the Holiday Makers Market brings last-chance opportunities to shop from this weekend's exceptional collection of artisan makers. Browse unique handcrafted gifts, artwork, jewelry, and home décor while enjoying the relaxed Sunday atmosphere. Many vendors offer special end-of-market pricing. A wonderful way to spend Sunday morning supporting local artists and finding treasures. Free and open to the public.",
+    music: "Sunday Morning Acoustic Sets",
+    environment: "Open-Air Covered Amphitheatre",
+    dressCode: "Casual - Sunday Comfortable",
+    img: "Crafted_Images/Holiday Makers Market Photo.jpg.avif"
+  },
+  {
+    id: "kids-workshop",
+    title: "Children's Be the Maker Workshop with Marilu Doodles",
+    date: "2025-11-16",
+    start: "11:00",
+    end: "12:15",
+    tz: "America/Chicago",
+    location: "Splash Pad, Alys Beach Amphitheatre",
+    where: "Splash Pad area, Alys Beach Amphitheatre",
+    category: ["Workshop","Family"],
+    url: "https://www.alysbeachcrafted.com/events/children%E2%80%99s-be-the-maker-workshop",
+    description: "Young artists ages 5-12 are invited to explore their creativity at this special children's workshop led by beloved local artist Marilu Doodles. Kids will create their own masterpiece using fun, age-appropriate techniques and materials. This hands-on session encourages imagination, self-expression, and artistic confidence in a supportive, playful environment. Each child takes home their creation plus newfound artistic skills. Parents welcome to observe. All materials included.",
+    music: "Fun Upbeat Kids' Background Music",
+    environment: "Outdoor Covered Kids' Area",
+    dressCode: "Play Clothes - Art-Friendly (May Get Messy)",
+    img: "Crafted_Images/Be the Maker - Marilu Doodles.jpg.avif"
+  },
+  {
+    id: "pickleball-picklebacks",
+    title: "Pickleball & Picklebacks (Festival Finale)",
+    date: "2025-11-16",
+    start: "12:00",
+    end: "15:00",
+    tz: "America/Chicago",
+    location: "Racquet Courts at ZUMA",
+    where: "Racquet Courts at ZUMA Beach Club, Alys Beach",
+    category: ["Play","Brunch","Signature"],
+    url: "https://www.alysbeachcrafted.com/events/pickleball-%26-picklebacks",
+    description: "Close out Crafted 2025 in style at this spirited festival finale! Eight teams compete in a friendly pickleball tournament while spectators enjoy a festive brunch with pickle-inspired cocktails (yes, picklebacks!) and live music. Whether you're playing or cheering, this casual celebration brings together the Crafted community for one last toast to an incredible weekend. Team registration available or just come watch the action, sip creative cocktails, and enjoy the beachside atmosphere. Spectators welcome and encouraged!",
+    music: "Live Coastal Beach Band",
+    environment: "Outdoor Beach Club & Courts",
+    dressCode: "Athletic Casual - Beach Club Style",
+    img: "Crafted_Images/Pickleball & Picklebacks Photo.jpg.avif",
+    ticketed: true
+  },
+];
+
+// ---------- UI helpers ----------
+const $ = (sel, el=document) => el.querySelector(sel);
+const $$ = (sel, el=document) => Array.from(el.querySelectorAll(sel));
+
+const DAYS = [
+  {key:"all", label:"All Days"},
+  {key:"2025-11-11", label:"Tuesday"},
+  {key:"2025-11-12", label:"Wednesday"},
+  {key:"2025-11-13", label:"Thursday"},
+  {key:"2025-11-14", label:"Friday"},
+  {key:"2025-11-15", label:"Saturday"},
+  {key:"2025-11-16", label:"Sunday"},
+];
+
+const ALL_CATS = Array.from(new Set(EVENTS.flatMap(e=>e.category))).sort();
+
+const state = {
+  day:"all",
+  cats:new Set(),
+  q:"",
+  plan:new Set(JSON.parse(localStorage.getItem("crafted-plan")||"[]")),
+  weather: {}
+};
+
+function savePlan(){
+  localStorage.setItem("crafted-plan", JSON.stringify(Array.from(state.plan)));
+  renderPlan();
+}
+
+// Fetch weather data for Alys Beach, FL
+async function fetchWeather(){
+  try {
+    // Alys Beach, FL coordinates
+    const lat = 30.3258;
+    const lon = -86.0561;
+
+    // Using Open-Meteo API (free, no key required)
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,weather_code&temperature_unit=fahrenheit&timezone=America/Chicago&forecast_days=14`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    // Store weather data by date
+    data.daily.time.forEach((date, index) => {
+      state.weather[date] = {
+        high: Math.round(data.daily.temperature_2m_max[index]),
+        low: Math.round(data.daily.temperature_2m_min[index]),
+        code: data.daily.weather_code[index]
+      };
+    });
+
+    // Re-render calendar if it's active
+    if($(".calendar-view").classList.contains("active")){
+      renderCalendar();
+    }
+  } catch(error){
+    console.error("Failed to fetch weather:", error);
+  }
+}
+
+function badge(cat){
+  return `<span class="tag">${cat}</span>`;
+}
+
+function dayOfWeek(dateStr){
+  const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const d = new Date(dateStr + "T00:00:00");
+  return days[d.getDay()];
+}
+
+function fmtTime(t){
+  if(!t) return "";
+  let [h,m]=t.split(":").map(n=>parseInt(n,10));
+  const ampm = h>=12? "PM":"AM";
+  h = (h%12)||12;
+  return `${h}:${m.toString().padStart(2,"0")} ${ampm}`;
+}
+
+function fmtRange(e){
+  const start = fmtTime(e.start);
+  const end = e.end? fmtTime(e.end):"";
+  return end? `${start}–${end}`: start;
+}
+
+function matches(e){
+  const dayOK = state.day==="all" || e.date===state.day;
+  const catsOK = state.cats.size===0 || [...state.cats].every(c=>e.category.includes(c));
+  const q = state.q.trim().toLowerCase();
+  const text = `${e.title} ${e.location} ${e.description}`.toLowerCase();
+  const qOK = q==="" || q.split(/\s+/).every(w=>text.includes(w));
+  return dayOK && catsOK && qOK;
+}
+
+function renderDays(){
+  const wrap = $("#dayChips");
+  wrap.innerHTML = DAYS.map(d=>`<button class="chip ${state.day===d.key?"active":""}" data-day="${d.key}">${d.label}</button>`).join("");
+  wrap.addEventListener("click",(ev)=>{
+    const b = ev.target.closest("button[data-day]");
+    if(!b) return;
+    state.day = b.dataset.day;
+    render();
+  });
+}
+
+function renderCats(){
+  const wrap = $("#catChips");
+  wrap.innerHTML = ALL_CATS.map(c=>`<button class="cat ${state.cats.has(c)?"active":""}" data-cat="${c}">${c}</button>`).join("");
+  wrap.addEventListener("click",(ev)=>{
+    const b = ev.target.closest("button[data-cat]");
+    if(!b) return;
+    const cat = b.dataset.cat;
+    if(state.cats.has(cat)) state.cats.delete(cat); else state.cats.add(cat);
+    render();
+  });
+}
+
+function renderList(){
+  const list = $("#list");
+  const filtered = EVENTS.filter(matches);
+  $("#count").textContent = filtered.length;
+  if(filtered.length===0){
+    list.innerHTML = `<div class="empty">No events match your filters. Try clearing a category or day.</div>`;
+    return;
+  }
+  list.innerHTML = filtered.map(e=>{
+    return `
+    <article class="event" data-id="${e.id}">
+      <div class="event-img" style="background-image:url('${e.img}')"></div>
+      <div class="event-content">
+        <h4>${e.title}</h4>
+        <div class="event-day-time">
+          <span class="day-badge">${dayOfWeek(e.date)}</span>
+          <span class="time-badge">${fmtRange(e)}</span>
+          ${e.ticketed ? '<span class="ticketed-badge"><span class="ticketed-badge-icon">🎟️</span>Ticketed</span>' : ''}
+        </div>
+        <div class="meta">📍 ${e.where || e.location}</div>
+        <div class="meta">${e.category.map(badge).join(" ")}</div>
+        <p class="small">${e.description}</p>
+        <div class="meta" style="margin-top:8px;padding:12px;background:var(--panel);border-radius:6px;font-size:13px">
+          ${e.music ? `<div style="margin:4px 0"><strong>🎵 Music:</strong> ${e.music}</div>` : ''}
+          ${e.environment ? `<div style="margin:4px 0"><strong>🌿 Environment:</strong> ${e.environment}</div>` : ''}
+          ${e.dressCode ? `<div style="margin:4px 0"><strong>👔 Dress Code:</strong> ${e.dressCode}</div>` : ''}
+        </div>
+        <div class="actions">
+          <a class="pill" href="${e.url}" target="_blank" rel="noopener">View Details</a>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+
+}
+
+function slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""); }
+
+function renderPlan(){
+  const wrap = $("#planList");
+  const items = EVENTS.filter(e=>state.plan.has(e.id)).sort((a,b)=> (a.date+a.start).localeCompare(b.date+b.start));
+  wrap.innerHTML = items.length? items.map(e=>`
+    <div class="small" style="padding:6px;background:var(--panel);border-radius:4px;margin-bottom:6px;border-left:3px solid var(--accent)">
+      <strong>${e.title}</strong><br>
+      <span style="font-weight:700;color:var(--brand)">${dayOfWeek(e.date)}</span> · <span style="font-weight:700;color:var(--accent)">${fmtRange(e)}</span><br>
+      📍 ${e.where || e.location}
+      ${e.dressCode ? `<br>👔 ${e.dressCode}` : ''}
+    </div>
+  `).join("") : `<div class="small empty">Nothing pinned yet.</div>`;
+}
+
+function yyyymmdd(e){
+  return e.date.replace(/-/g,"");
+}
+function hm(e){ return (e.start||"00:00").replace(":","") + "00"; }
+function hmEnd(e){
+  if(e.end) return e.end.replace(":","")+"00";
+  // if no end time given, default to 90 minutes
+  const [h,m] = e.start.split(":").map(Number);
+  const mins = h*60+m + 90;
+  const hh = String(Math.floor(mins/60)).padStart(2,"0");
+  const mm = String(mins%60).padStart(2,"0");
+  return hh+mm+"00";
+}
+
+function icsEscape(s){ return s.replace(/[,;]/g,"\$&").replace(/\n/g,"\\n"); }
+
+function buildICS(arr){
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Crafted Planner//Alys Beach//EN",
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH"
+  ];
+  arr.forEach((e,i)=>{
+    const dtStart = yyyymmdd(e)+"T"+hm(e);
+    const dtEnd = yyyymmdd(e)+"T"+hmEnd(e);
+    const uid = slug(e.id)+"@crafted-2025";
+
+    let desc = e.description || "";
+    if(e.music) desc += "\\n\\nMusic: " + e.music;
+    if(e.environment) desc += "\\nEnvironment: " + e.environment;
+    if(e.dressCode) desc += "\\nDress Code: " + e.dressCode;
+    desc += "\\n\\nMore info: " + e.url;
+
+    lines.push(
+      "BEGIN:VEVENT",
+      "UID:"+uid,
+      "DTSTAMP:"+yyyymmdd(e)+"T000000Z",
+      "DTSTART;TZID="+e.tz+":"+dtStart,
+      "DTEND;TZID="+e.tz+":"+dtEnd,
+      "SUMMARY:"+icsEscape(e.title),
+      "LOCATION:"+icsEscape(e.where || e.location),
+      "DESCRIPTION:"+icsEscape(desc),
+      "END:VEVENT"
+    );
+  });
+  lines.push("END:VCALENDAR");
+  return lines.join("\r\n");
+}
+
+function googleCalUrl(e){
+  const base = "https://calendar.google.com/calendar/u/0/r/eventedit";
+  const dates = yyyymmdd(e)+"T"+hm(e)+"/"+yyyymmdd(e)+"T"+hmEnd(e);
+
+  let details = e.description || "";
+  if(e.music) details += "\n\nMusic: " + e.music;
+  if(e.environment) details += "\nEnvironment: " + e.environment;
+  if(e.dressCode) details += "\nDress Code: " + e.dressCode;
+  details += "\n\nMore info: " + e.url;
+
+  const params = new URLSearchParams({
+    text: e.title,
+    dates: dates,
+    details: details,
+    location: e.where || e.location
+  });
+  return base+"?"+params.toString();
+}
+
+function downloadFile(name, content, mime){
+  const blob = new Blob([content], {type:mime});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{
+    URL.revokeObjectURL(url); a.remove();
+  }, 500);
+}
+
+// wiring
+function render(){
+  renderList();
+  renderPlan();
+}
+renderDays();
+renderCats();
+render();
+$("#q").addEventListener("input", (e)=>{ state.q = e.target.value; render(); });
+$("#clearCats").addEventListener("click",()=>{
+  state.cats.clear(); render(); renderCats();
+});
+
+// ---------- Calendar View ----------
+function timeToMinutes(timeStr){
+  const [h,m] = timeStr.split(":").map(Number);
+  return h * 60 + m;
+}
+
+function getEventPosition(event){
+  const startMinutes = timeToMinutes(event.start);
+  const endMinutes = event.end ? timeToMinutes(event.end) : startMinutes + 90;
+
+  // Timeline starts at 10:00 AM (600 minutes)
+  const timelineStart = 10 * 60; // 10 AM
+  const pixelsPerHour = 100;
+
+  const top = ((startMinutes - timelineStart) / 60) * pixelsPerHour;
+  const duration = endMinutes - startMinutes;
+  const height = (duration / 60) * pixelsPerHour;
+
+  return { top, height };
+}
+
+function getCategoryClass(event){
+  return event.category.map(c => `category-${c}`).join(' ');
+}
+
+function renderCalendar(){
+  const container = $("#calendarView");
+  const eventsByDay = {};
+
+  EVENTS.forEach(e=>{
+    if(!eventsByDay[e.date]) eventsByDay[e.date]=[];
+    eventsByDay[e.date].push(e);
+  });
+
+  const allDates = DAYS.filter(d => d.key !== "all").map(d => d.key);
+
+  // Time slots from 10 AM to 10 PM
+  const timeSlots = [];
+  for(let h = 10; h <= 22; h++){
+    const ampm = h >= 12 ? "PM" : "AM";
+    const display = ((h % 12) || 12) + ":00 " + ampm;
+    timeSlots.push({hour: h, display});
+  }
+
+  let html = `
+    <div class="panel">
+      <h3>📅 Visual Timeline Grid</h3>
+      <div class="small" style="margin-bottom:12px">See your whole week at a glance. Event height = duration. Colored left border = category. Click any event for details.</div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;padding:12px;background:var(--panel);border-radius:6px">
+        <span style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em">Legend:</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px"><span style="width:16px;height:3px;background:#9333ea"></span> Music</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px"><span style="width:16px;height:3px;background:#059669"></span> Dinner</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px"><span style="width:16px;height:3px;background:#dc2626"></span> Tasting</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px"><span style="width:16px;height:3px;background:#2563eb"></span> Tour</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px"><span style="width:16px;height:3px;background:#d97706"></span> Market</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px"><span style="width:16px;height:3px;background:#7c3aed"></span> Workshop</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px"><span style="width:16px;height:3px;background:#ca8a04"></span> Signature</span>
+      </div>
+
+      <div class="timeline-grid-wrapper">
+        <div class="timeline-grid">
+          <!-- Time Ruler -->
+          <div class="time-ruler">
+            <div style="height:52px;border-bottom:2px solid var(--border)"></div>
+            ${timeSlots.map(slot => `<div class="time-slot">${slot.display}</div>`).join('')}
+          </div>
+
+          <!-- Day Columns -->
+          ${allDates.map(date => {
+            const dayEvents = eventsByDay[date] || [];
+            const dayName = dayOfWeek(date);
+            const weather = state.weather[date];
+            const weatherHTML = weather ? `<div style="font-size:11px;font-weight:400;margin-top:4px">☀️ ${weather.high}° / ${weather.low}°</div>` : '';
+
+            return `
+              <div class="day-column">
+                <div class="day-column-header">
+                  <div>${dayName}</div>
+                  ${weatherHTML}
+                </div>
+                <div class="day-column-body">
+                  <!-- Time grid background -->
+                  <div class="time-grid-bg">
+                    ${timeSlots.map(() => `<div class="time-grid-line"></div>`).join('')}
+                  </div>
+
+                  <!-- Events -->
+                  ${dayEvents.map(event => {
+                    const pos = getEventPosition(event);
+                    const categoryClass = getCategoryClass(event);
+                    const compactClass = pos.height < 80 ? 'compact' : '';
+
+                    return `
+                      <div class="timeline-event-block ${categoryClass} ${compactClass}"
+                           style="top:${pos.top}px;height:${pos.height}px"
+                           data-event-id="${event.id}">
+                        <div class="event-time-block">${fmtRange(event)} ${event.ticketed ? '<span class="ticketed-badge-icon">🎟️</span>' : ''}</div>
+                        <div class="event-title-block">${event.title}</div>
+                        ${pos.height >= 80 ? `<div class="event-thumb" style="background-image:url('${event.img}')"></div>` : ''}
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+
+  container.innerHTML = html;
+
+  // Create tooltip element
+  let tooltip = document.createElement("div");
+  tooltip.className = "event-tooltip";
+  document.body.appendChild(tooltip);
+
+  // Add click and hover handlers for events
+  $$(".timeline-event-block").forEach(block => {
+    // Click handler
+    block.addEventListener("click", (e) => {
+      const eventId = block.dataset.eventId;
+      const event = EVENTS.find(ev => ev.id === eventId);
+      if(event) showEventModal(event);
+    });
+
+    // Hover handlers for tooltip
+    block.addEventListener("mouseenter", (e) => {
+      const eventId = block.dataset.eventId;
+      const event = EVENTS.find(ev => ev.id === eventId);
+      if(event) showEventTooltip(event, e, tooltip);
+    });
+
+    block.addEventListener("mousemove", (e) => {
+      positionTooltip(e, tooltip);
+    });
+
+    block.addEventListener("mouseleave", () => {
+      hideEventTooltip(tooltip);
+    });
+  });
+
+  // Add now indicator if festival is happening
+  addNowIndicator();
+}
+
+function showEventTooltip(event, mouseEvent, tooltip){
+  let html = `
+    <div class="event-tooltip-img" style="background-image:url('${event.img}')"></div>
+    <div class="event-tooltip-title">${event.title} ${event.ticketed ? '<span class="ticketed-badge"><span class="ticketed-badge-icon">🎟️</span>Ticketed</span>' : ''}</div>
+    <div class="event-tooltip-time">📅 ${dayOfWeek(event.date)} · ${fmtRange(event)}</div>
+    <div class="event-tooltip-location">📍 ${event.where || event.location}</div>
+    <div class="event-tooltip-desc">${event.description}</div>
+    <div class="event-tooltip-meta">
+      ${event.music ? `<div style="margin:4px 0">🎵 ${event.music}</div>` : ''}
+      ${event.environment ? `<div style="margin:4px 0">🌿 ${event.environment}</div>` : ''}
+      ${event.dressCode ? `<div style="margin:4px 0">👔 ${event.dressCode}</div>` : ''}
+    </div>
+    <div class="event-tooltip-categories">
+      ${event.category.map(c => `<span class="tag">${c}</span>`).join('')}
+    </div>
+  `;
+
+  tooltip.innerHTML = html;
+  positionTooltip(mouseEvent, tooltip);
+  tooltip.classList.add("visible");
+}
+
+function positionTooltip(mouseEvent, tooltip){
+  const offset = 20;
+  let x = mouseEvent.clientX + offset;
+  let y = mouseEvent.clientY + offset;
+
+  // Keep tooltip on screen
+  const rect = tooltip.getBoundingClientRect();
+  if(x + rect.width > window.innerWidth){
+    x = mouseEvent.clientX - rect.width - offset;
+  }
+  if(y + rect.height > window.innerHeight){
+    y = mouseEvent.clientY - rect.height - offset;
+  }
+
+  tooltip.style.left = x + "px";
+  tooltip.style.top = y + "px";
+}
+
+function hideEventTooltip(tooltip){
+  tooltip.classList.remove("visible");
+}
+
+function addNowIndicator(){
+  const now = new Date();
+  const currentDate = now.toISOString().split('T')[0];
+  const currentHour = now.getHours();
+  const currentMinutes = now.getMinutes();
+
+  // Check if current date is within festival dates
+  const festivalDates = DAYS.filter(d => d.key !== "all").map(d => d.key);
+  if(!festivalDates.includes(currentDate)) return;
+
+  // Calculate position
+  const timelineStart = 10 * 60; // 10 AM
+  const currentTimeMinutes = currentHour * 60 + currentMinutes;
+  const pixelsPerHour = 100;
+  const top = ((currentTimeMinutes - timelineStart) / 60) * pixelsPerHour + 52; // +52 for header height
+
+  // Find the day column
+  const dayColumns = $$(".day-column");
+  const dayIndex = festivalDates.indexOf(currentDate);
+  if(dayIndex >= 0 && dayColumns[dayIndex]){
+    const indicator = document.createElement("div");
+    indicator.className = "now-indicator";
+    indicator.style.top = top + "px";
+    const gridWrapper = $(".timeline-grid");
+    if(gridWrapper) gridWrapper.appendChild(indicator);
+  }
+}
+
+function showEventModal(e){
+  let details = `${e.title}\n\n`;
+  details += `📅 When: ${dayOfWeek(e.date)} at ${fmtRange(e)}\n`;
+  details += `📍 Where: ${e.where || e.location}\n`;
+  if(e.music) details += `🎵 Music: ${e.music}\n`;
+  if(e.environment) details += `🌿 Environment: ${e.environment}\n`;
+  if(e.dressCode) details += `👔 Dress Code: ${e.dressCode}\n`;
+  details += `\n${e.description}\n\n`;
+  details += `Would you like to view this event online?`;
+
+  const modal = confirm(details);
+  if(modal){
+    window.open(e.url, "_blank");
+  }
+}
+
+// View switching
+$("#listViewBtn").addEventListener("click",()=>{
+  $(".list-view").classList.add("active");
+  $(".calendar-view").classList.remove("active");
+  $("#listViewBtn").classList.add("active");
+  $("#calViewBtn").classList.remove("active");
+});
+
+$("#calViewBtn").addEventListener("click",()=>{
+  $(".calendar-view").classList.add("active");
+  $(".list-view").classList.remove("active");
+  $("#calViewBtn").classList.add("active");
+  $("#listViewBtn").classList.remove("active");
+  renderCalendar();
+});
+
+// Menu button (can be extended for mobile menu)
+$("#menuBtn").addEventListener("click",()=>{
+  const isCalView = $(".calendar-view").classList.contains("active");
+  if(isCalView){
+    $("#listViewBtn").click();
+  } else {
+    $("#calViewBtn").click();
+  }
+});
+
+// Map Modal
+$("#showMapBtn").addEventListener("click",()=>{
+  $("#mapModal").classList.add("active");
+});
+
+$("#closeMapBtn").addEventListener("click",()=>{
+  $("#mapModal").classList.remove("active");
+});
+
+// Close map modal when clicking outside the content
+$("#mapModal").addEventListener("click",(e)=>{
+  if(e.target === $("#mapModal")){
+    $("#mapModal").classList.remove("active");
+  }
+});
+
+// Close map modal with Escape key
+document.addEventListener("keydown",(e)=>{
+  if(e.key === "Escape"){
+    $("#mapModal").classList.remove("active");
+  }
+});
+
+// Fetch weather on page load
+fetchWeather();
+
+</script>
+</body>
+</html>
