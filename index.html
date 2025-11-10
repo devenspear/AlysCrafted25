@@ -187,7 +187,7 @@
       <div class="sub">November 12–16, 2025 • Alys Beach, Florida</div>
       <div class="cta-row">
         <a class="btn primary" href="https://www.alysbeachcrafted.com/" target="_blank" rel="noopener">Official Festival Site</a>
-        <button class="btn" id="showMapBtn">📍 Event Map</button>
+        <button class="btn" id="showMapBtn" onclick="openMapModal()">📍 Event Map</button>
       </div>
     </div>
   </header>
@@ -225,9 +225,9 @@
   </footer>
 
   <!-- Map Modal -->
-  <div class="map-modal" id="mapModal">
+  <div class="map-modal" id="mapModal" onclick="if(event.target.id==='mapModal')closeMapModal()">
     <div class="map-modal-content">
-      <button class="map-modal-close" id="closeMapBtn">×</button>
+      <button class="map-modal-close" id="closeMapBtn" onclick="closeMapModal()">×</button>
       <img class="map-modal-img" src="2025 CRAFTED MAP.jpg" alt="Crafted 2025 Event Map">
     </div>
   </div>
@@ -722,14 +722,27 @@ function openMapModal(){
   const modal = document.getElementById("mapModal");
   if(!modal){
     console.error("Map modal element not found!");
+    alert("ERROR: Map modal not found!");
     return;
   }
   console.log("Modal element found, adding active class");
   modal.classList.add("active");
+
+  // Force display
+  modal.style.display = "flex";
+
   document.body.style.overflow = "hidden";
   document.body.style.position = "fixed";
   document.body.style.width = "100%";
-  console.log("Map modal opened, display style:", window.getComputedStyle(modal).display);
+
+  const computedDisplay = window.getComputedStyle(modal).display;
+  console.log("Map modal opened, display style:", computedDisplay);
+
+  // Debug: check if modal is visible
+  if(computedDisplay === "none"){
+    console.error("Modal still hidden after adding active class!");
+    alert("DEBUG: Modal display is still 'none' after opening");
+  }
 }
 
 function closeMapModal(){
@@ -740,6 +753,10 @@ function closeMapModal(){
     return;
   }
   modal.classList.remove("active");
+
+  // Force hide
+  modal.style.display = "none";
+
   document.body.style.overflow = "";
   document.body.style.position = "";
   document.body.style.width = "";
